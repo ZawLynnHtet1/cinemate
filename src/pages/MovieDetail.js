@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import  Backup from "../assets/images/backup.png";
 import { useTitle } from "../hooks/useTitle";
 
-
 export const MovieDetail = () => {
 
   const params = useParams();
@@ -22,10 +21,7 @@ export const MovieDetail = () => {
   },[url])
 
   const image = movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : Backup;
-  //eslint-disable-next-line
-  const pageTitle = useTitle(movie.title)
-
-
+  useTitle(movie.title)
 
   return (
     <main>

@@ -7,7 +7,7 @@ export const MovieList = ({apiPath, title}) => {
 
   const { data: movies } = useFetch(apiPath);
 
-  useTitle(title);
+  const pageTitle = useTitle(title);
 
   return (
     <main>
